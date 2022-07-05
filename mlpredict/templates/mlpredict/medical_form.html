@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-family: sans-serif;
+            color:#555;
+            letter-spacing:1px;
+        }
+        form{
+            display:flex;
+            align-items:center;
+            flex-direction:column;
+            border:1px solid #ccc;
+            padding:20px;
+            font-family: sans-serif;
+            width:300px;
+            border-radius:10px;
+            box-shadow: 2px 2px 15px #ccc;
+        }
+        label{
+            font-size:16px;
+        }
+        input{
+            box-sizing:border-box;
+            width:100%;
+            margin-bottom:20px;
+            font-size:16px;
+            padding:5px 10px;
+            outline:none;
+            border:none;
+            background:#eee;
+            border-radius:5px;
+        }
+        select{
+            box-sizing:border-box;
+            width:100%;
+            margin-bottom:20px;
+            font-size:16px;
+            padding:5px 10px;
+            outline:none;
+            border:none;
+            border-radius:5px;
+            background:#eee;
+        }
+        input[type="submit"]{
+            background:blueviolet;
+            color:white;
+            cursor:pointer;
+            transition:.3s;
+            text-transform: uppercase;
+            height: 35px;
+        }
+        input[type="submit"]:hover{
+            background:rgb(102, 31, 168);
+        }
+        input[type="submit"]:active{
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Fill the form for prediction.</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+            <input type='submit' value='predict'>
+        </form>
+        <h3>Predicted amount: {{amount}}</h3>
+    </div>
+</body>
+</html>

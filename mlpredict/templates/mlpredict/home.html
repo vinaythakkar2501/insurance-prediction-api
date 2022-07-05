@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../static/css/facultylogin.css">
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="card container">
+      <form>
+        <b>
+          <h2>Add Student</h2>
+        </b>
+        <div class="inputbox">
+          <label>UserName:</label>
+          <input type="text" name="username" placeholder="Student-ID" required>
+        </div>
+        <div class="inputbox">
+          <label>FirstName:</label>
+          <input type="text" name="first_name" required placeholder="FirstName">
+        </div>
+        <div class="inputbox">
+          <label>LastName:</label>
+          <input type="text" name="last_name" required placeholder="LastName">
+        </div>
+        <div class="inputbox">
+          <label>Email:</label>
+          <input type="email" name="email" placeholder="Email-Id" required>
+        </div>
+        <div class="inputbox">
+          <label>DOB:</label>
+          <input type="date" name="dob" required>
+        </div>
+        <div class="inputbox">
+          <label>ROLLNO:</label>
+          <input type="text" name="roll" required placeholder="ROLLNO">
+        </div>
+        <div class="inputbox">
+          <label for="sem">Semester:</label>
+          <select name="sem" id="sem" required>
+            <option value="sem1">Sem1</option>
+            <option value="sem2">Sem2</option>
+            <option value="sem3">Sem3</option>
+            <option value="sem4">Sem4</option>
+            <option value="sem5">Sem5</option>
+            <option value="sem6">Sem6</option>
+            <option value="sem7">Sem7</option>
+            <option value="sem8">Sem8</option>
+          </select>
+        </div>
+        <div class="inputbox">
+          <label for="mobileno">MobileNo:</label>
+          <input type="text" placeholder="10 Digit MobileNo" pattern="[0-9]{10}" required name="mobileno">
+        </div>
+        <div class="inputbox">
+          <label for="pmobileno">ParentsMobileNo:</label>
+          <input type="text" placeholder="10 Digit ParentsMobileNo" pattern="[0-9]{10}" required name="pmobileno">
+        </div>
+        <input type="submit" name="submit">
+      </form>
+      <form>
+        <div class="btngrp">
+          <input type="submit" name="takephoto" value="Take Photo">
+          <input type="submit" name="takeattendance" value="Take attendance">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
